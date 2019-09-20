@@ -1,4 +1,0 @@
-framework module Notifications {
-  header "Notifications-Swift.h"
-  requires objc
-}
