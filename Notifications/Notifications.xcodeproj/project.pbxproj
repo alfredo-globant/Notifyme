@@ -18,6 +18,7 @@
 		DEA94A2B2335561900E869FD /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A232335561900E869FD /* FIRAnalyticsConnector.framework */; };
 		DEA94A2C2335561900E869FD /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A242335561900E869FD /* FirebaseInstanceID.framework */; };
 		DEA94A2D2335561900E869FD /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A252335561900E869FD /* nanopb.framework */; };
+		DEA94A3623358D3500E869FD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A3523358D3500E869FD /* StoreKit.framework */; };
 		F8265E4A233547140024E389 /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E40233547140024E389 /* Notifications.framework */; };
 		F8265E4F233547140024E389 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E4E233547140024E389 /* NotificationsTests.swift */; };
 		F8265E51233547140024E389 /* Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = F8265E43233547140024E389 /* Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		DEA94A232335561900E869FD /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
 		DEA94A242335561900E869FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		DEA94A252335561900E869FD /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		DEA94A3523358D3500E869FD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F8265E40233547140024E389 /* Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E43233547140024E389 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		F8265E44233547140024E389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA94A3623358D3500E869FD /* StoreKit.framework in Frameworks */,
 				DEA94A272335561900E869FD /* FirebaseCore.framework in Frameworks */,
 				DEA94A1C2335560300E869FD /* FirebaseMessaging.framework in Frameworks */,
 				DEA94A2D2335561900E869FD /* nanopb.framework in Frameworks */,
@@ -135,6 +138,14 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		DEA94A3423358D3500E869FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEA94A3523358D3500E869FD /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8265E36233547140024E389 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +154,7 @@
 				F8265E42233547140024E389 /* Notifications */,
 				F8265E4D233547140024E389 /* NotificationsTests */,
 				F8265E41233547140024E389 /* Products */,
+				DEA94A3423358D3500E869FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -541,6 +553,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.Notifications;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -572,6 +585,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.Notifications;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

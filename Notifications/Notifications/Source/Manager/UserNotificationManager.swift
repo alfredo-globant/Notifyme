@@ -1,5 +1,7 @@
 import UIKit
 import UserNotifications
+import FirebaseCore
+import FirebaseInstanceID
 
 fileprivate let notificationCenterDelegateContainer = NotificationCenterDelegateContainer()
 
@@ -18,6 +20,7 @@ public protocol UserNotificationManagerDelegate: class {
     ///   - response: The user’s response to the notification.
     ///   - completionHandler: The block to execute when you have finished processing the user’s response. You must execute this block at some point after processing the user's response to let the system know that you are done.
     func userNotificationManager(_ userNotificationManager: UserNotificationManager, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    
 }
 
 /// A type to manage user notifications.
@@ -25,6 +28,7 @@ public protocol UserNotificationManagerDelegate: class {
 /// For an instance of `UserNotificationManager` to work properly, it needs to know about all the features in the app that use user notifications.
 /// So, typically an instance of `UserNotificationManager` is create at the core of the application and injected into components that need it.
 public final class UserNotificationManager: UserNotificationManageable {
+
     
     /// User notification authorization status
     ///
@@ -161,9 +165,31 @@ public extension UserNotificationManager {
         receiver.didReceiveNotification(payload, fetchCompletionHandler: completionHandler)
     }
     
-    public func didPrintHello(){
-        debugPrint("test CODI")
+    func configureFirebase(with options: FirebaseOptions?, completionHandler: @escaping (Bool) -> Void) {
+//        FirebaseApp.app()?.delete({ (deleted) in
+//            if deleted {
+//                FirebaseApp.configure()
+//                completionHandler(deleted)
+//            } else {
+//                completionHandler(deleted)
+//            }
+//        })
+        FirebaseApp.configure()
+        completionHandler(true)
     }
+    
+    public func getFirebaseToken(completion: @escaping (String?) -> Void) {
+        InstanceID.instanceID().instanceID(handler: { (result, error) in
+            if let error = error {
+                debugPrint("ERROR")
+                completion(nil)
+            } else {
+                debugPrint("\(result?.token)")
+                completion(result?.token)
+            }
+        })
+    }
+    
 }
 
 extension UserNotificationManager {

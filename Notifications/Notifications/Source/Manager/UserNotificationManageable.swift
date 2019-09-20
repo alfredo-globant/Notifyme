@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import UserNotifications
+import FirebaseCore
 
 /// Protocol that defines the ability to receive an APNS Token and receive a push notification userInfo dictionary
 public protocol UserNotificationManageable {
@@ -54,5 +55,9 @@ public protocol UserNotificationManageable {
     /// - Parameter receiver: The receiver to register
     /// - Throws: Throws if the receiver is already registered
     func registerReceiver(_ receiver: NotificationReceivable) throws
+    
+    func configureFirebase(with options: FirebaseOptions?, completionHandler: @escaping (Bool) -> Void)
+    
+    func getFirebaseToken(completion: @escaping(String?) -> Void)
     
 }

@@ -8,6 +8,8 @@ protocol UserNotificationAuthorizationManaging {
     
     func getAuthorizationStatus(completionHandler: @escaping (UNAuthorizationStatus) -> Void)
     
+    //func configureFirebase(with options: FirebaseOptions, completionHandler: @escaping (Bool) -> Void)
+    
 }
 
 final class UserNotificationAuthorizationManager: UserNotificationAuthorizationManaging {
@@ -31,5 +33,16 @@ final class UserNotificationAuthorizationManager: UserNotificationAuthorizationM
             completionHandler($0)
         }
     }
+    
+//    func configureFirebase(with options: FirebaseOptions, completionHandler: @escaping (Bool) -> Void) {
+//        FirebaseApp.app()?.delete({ (deleted) in
+//            if deleted {
+//                FirebaseApp.configure()
+//                completionHandler(deleted)
+//            } else {
+//                completionHandler(deleted)
+//            }
+//        })
+//    }
     
 }
