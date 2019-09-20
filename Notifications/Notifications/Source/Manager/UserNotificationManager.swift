@@ -160,6 +160,10 @@ public extension UserNotificationManager {
         }
         receiver.didReceiveNotification(payload, fetchCompletionHandler: completionHandler)
     }
+    
+    public func didPrintHello(){
+        debugPrint("test CODI")
+    }
 }
 
 extension UserNotificationManager {

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEA94A182335556D00E869FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA94A172335556D00E869FD /* GoogleService-Info.plist */; };
+		DEA94A1C2335560300E869FD /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A1A2335560200E869FD /* FirebaseMessaging.framework */; };
+		DEA94A1D2335560300E869FD /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A1B2335560300E869FD /* Protobuf.framework */; };
+		DEA94A262335561900E869FD /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A1E2335561800E869FD /* GoogleAppMeasurement.framework */; };
+		DEA94A272335561900E869FD /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A1F2335561800E869FD /* FirebaseCore.framework */; };
+		DEA94A282335561900E869FD /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A202335561900E869FD /* GoogleUtilities.framework */; };
+		DEA94A292335561900E869FD /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A212335561900E869FD /* FirebaseCoreDiagnostics.framework */; };
+		DEA94A2A2335561900E869FD /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A222335561900E869FD /* FirebaseAnalytics.framework */; };
+		DEA94A2B2335561900E869FD /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A232335561900E869FD /* FIRAnalyticsConnector.framework */; };
+		DEA94A2C2335561900E869FD /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A242335561900E869FD /* FirebaseInstanceID.framework */; };
+		DEA94A2D2335561900E869FD /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94A252335561900E869FD /* nanopb.framework */; };
 		F8265E4A233547140024E389 /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E40233547140024E389 /* Notifications.framework */; };
 		F8265E4F233547140024E389 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E4E233547140024E389 /* NotificationsTests.swift */; };
 		F8265E51233547140024E389 /* Notifications.h in Headers */ = {isa = PBXBuildFile; fileRef = F8265E43233547140024E389 /* Notifications.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +52,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DEA94A172335556D00E869FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEA94A1A2335560200E869FD /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
+		DEA94A1B2335560300E869FD /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		DEA94A1E2335561800E869FD /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		DEA94A1F2335561800E869FD /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		DEA94A202335561900E869FD /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		DEA94A212335561900E869FD /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		DEA94A222335561900E869FD /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		DEA94A232335561900E869FD /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		DEA94A242335561900E869FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		DEA94A252335561900E869FD /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
 		F8265E40233547140024E389 /* Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E43233547140024E389 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		F8265E44233547140024E389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +94,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA94A272335561900E869FD /* FirebaseCore.framework in Frameworks */,
+				DEA94A1C2335560300E869FD /* FirebaseMessaging.framework in Frameworks */,
+				DEA94A2D2335561900E869FD /* nanopb.framework in Frameworks */,
+				DEA94A1D2335560300E869FD /* Protobuf.framework in Frameworks */,
+				DEA94A292335561900E869FD /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				DEA94A2C2335561900E869FD /* FirebaseInstanceID.framework in Frameworks */,
+				DEA94A2A2335561900E869FD /* FirebaseAnalytics.framework in Frameworks */,
+				DEA94A282335561900E869FD /* GoogleUtilities.framework in Frameworks */,
+				DEA94A262335561900E869FD /* GoogleAppMeasurement.framework in Frameworks */,
+				DEA94A2B2335561900E869FD /* FIRAnalyticsConnector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,9 +118,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DEA94A192335557C00E869FD /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DEA94A232335561900E869FD /* FIRAnalyticsConnector.framework */,
+				DEA94A222335561900E869FD /* FirebaseAnalytics.framework */,
+				DEA94A1F2335561800E869FD /* FirebaseCore.framework */,
+				DEA94A212335561900E869FD /* FirebaseCoreDiagnostics.framework */,
+				DEA94A242335561900E869FD /* FirebaseInstanceID.framework */,
+				DEA94A1E2335561800E869FD /* GoogleAppMeasurement.framework */,
+				DEA94A202335561900E869FD /* GoogleUtilities.framework */,
+				DEA94A252335561900E869FD /* nanopb.framework */,
+				DEA94A1A2335560200E869FD /* FirebaseMessaging.framework */,
+				DEA94A1B2335560300E869FD /* Protobuf.framework */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		F8265E36233547140024E389 = {
 			isa = PBXGroup;
 			children = (
+				DEA94A192335557C00E869FD /* Firebase */,
+				DEA94A172335556D00E869FD /* GoogleService-Info.plist */,
 				F8265E42233547140024E389 /* Notifications */,
 				F8265E4D233547140024E389 /* NotificationsTests */,
 				F8265E41233547140024E389 /* Products */,
@@ -288,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA94A182335556D00E869FD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +530,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Firebase",
+				);
 				INFOPLIST_FILE = Notifications/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,6 +561,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Firebase",
+				);
 				INFOPLIST_FILE = Notifications/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

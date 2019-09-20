@@ -15,11 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var notificationsManager: UserNotificationManager?
+    var notificationsManager: UserNotificationManager? {
+        return (window?.rootViewController as? MainViewController)?.notificationsManager
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        _ = window?.rootViewController?.view
         //UNUserNotificationCenter.current().delegate = notificationsManager?.designatedDelegate()
         return true
     }
