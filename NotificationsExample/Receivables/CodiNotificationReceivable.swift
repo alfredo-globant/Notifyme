@@ -1,44 +1,16 @@
 //
-//  ViewController.swift
+//  CodiNotificationReceivable.swift
 //  NotificationsExample
 //
 //  Created by Jesus2 HERNANDEZ on 9/20/19.
 //  Copyright © 2019 Jesus2 HERNANDEZ. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Notifications
 import UserNotifications
 
-class ViewController: UIViewController {
-    
-    var notificationsManager: UserNotificationManager?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
-
-struct CodiNotification: Codable {
-    var serial: Int
-    var messageCrypt: String
-    var messageID: String
-    
-    enum CodingKeys: String, CodingKey {
-        case serial = "s"
-        case messageCrypt = "mc"
-        case messageID = "id"
-    }
-    
-    init() {
-        serial = 0
-        messageCrypt = ""
-        messageID = ""
-    }
-}
-
-
-class FirebaseFeatureReceivable: NotificationReceivable {
+class CodiNotificationReceivable: NotificationReceivable {
     var identifier: String = ""
     var isAssociated: Bool?
     var apnsTokenData: Data?
@@ -64,3 +36,4 @@ class FirebaseFeatureReceivable: NotificationReceivable {
         
     }
 }
+

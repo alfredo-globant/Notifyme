@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		F8265E03233533990024E389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E02233533990024E389 /* AppDelegate.swift */; };
-		F8265E05233533990024E389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E04233533990024E389 /* ViewController.swift */; };
+		F8265E05233533990024E389 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E04233533990024E389 /* MainViewController.swift */; };
 		F8265E08233533990024E389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8265E06233533990024E389 /* Main.storyboard */; };
 		F8265E0A2335339A0024E389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8265E092335339A0024E389 /* Assets.xcassets */; };
 		F8265E0D2335339A0024E389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8265E0B2335339A0024E389 /* LaunchScreen.storyboard */; };
 		F8265E182335339A0024E389 /* NotificationsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E172335339A0024E389 /* NotificationsExampleTests.swift */; };
 		F8265E232335339A0024E389 /* NotificationsExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E222335339A0024E389 /* NotificationsExampleUITests.swift */; };
 		F8265E89233547D90024E389 /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E88233547D90024E389 /* Notifications.framework */; };
+		F8265E8E2335495E0024E389 /* CodiNotificationReceivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */; };
+		F8265E90233549AF0024E389 /* CodiNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E8F233549AF0024E389 /* CodiNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		F8265DFF233533990024E389 /* NotificationsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E02233533990024E389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8265E04233533990024E389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8265E04233533990024E389 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F8265E07233533990024E389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8265E092335339A0024E389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8265E0C2335339A0024E389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		F8265E222335339A0024E389 /* NotificationsExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsExampleUITests.swift; sourceTree = "<group>"; };
 		F8265E242335339A0024E389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8265E88233547D90024E389 /* Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotificationReceivable.swift; sourceTree = "<group>"; };
+		F8265E8F233549AF0024E389 /* CodiNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 		F8265E01233533990024E389 /* NotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
+				F8265E8B2335493A0024E389 /* Receivables */,
 				F8265E02233533990024E389 /* AppDelegate.swift */,
-				F8265E04233533990024E389 /* ViewController.swift */,
+				F8265E8A2335491A0024E389 /* Scenes */,
 				F8265E06233533990024E389 /* Main.storyboard */,
 				F8265E092335339A0024E389 /* Assets.xcassets */,
 				F8265E0B2335339A0024E389 /* LaunchScreen.storyboard */,
@@ -135,6 +140,23 @@
 				F8265E88233547D90024E389 /* Notifications.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8265E8A2335491A0024E389 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F8265E04233533990024E389 /* MainViewController.swift */,
+				F8265E8F233549AF0024E389 /* CodiNotification.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F8265E8B2335493A0024E389 /* Receivables */ = {
+			isa = PBXGroup;
+			children = (
+				F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */,
+			);
+			path = Receivables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8265E05233533990024E389 /* ViewController.swift in Sources */,
+				F8265E05233533990024E389 /* MainViewController.swift in Sources */,
 				F8265E03233533990024E389 /* AppDelegate.swift in Sources */,
+				F8265E8E2335495E0024E389 /* CodiNotificationReceivable.swift in Sources */,
+				F8265E90233549AF0024E389 /* CodiNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.NotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.notifyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.NotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.notifyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
