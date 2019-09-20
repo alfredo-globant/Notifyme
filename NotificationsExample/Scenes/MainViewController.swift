@@ -10,20 +10,59 @@ import UIKit
 import Notifications
 import UserNotifications
 
-class MainViewController: UIViewController {
-    
-    var notificationsManager: UserNotificationManager?
-    var receivers: [NotificationReceivable] = [CodiNotificationReceivable()]
+// MARK: - Main View Controller
 
+class MainViewController: UIViewController {
+    var notificationsManager: UserNotificationManager?
+    var notificationResolver: NotificationResolving = CodiNotificationResolving()
+    var areNotificationsEnabled = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //notificationsManager = UserNotificationManager(requesting: [.badge, .alert, .sound], host: self, notificationResolver: receivers)
+        notificationsManager = UserNotificationManager(requesting: [.badge, .alert, .sound],
+                                                       host: self,
+                                                       notificationResolver: notificationResolver)
+        
+        notificationsManager?.delegate = self
+        
+        notificationsManager?.requestAuthorization { authResponse in
+            print("MainViewController> viewDidLoad: Is authorised?: \(authResponse.isAuthorised)")
+            self.areNotificationsEnabled = authResponse.isAuthorised
+        }
+    }
+    
+    func createNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Hello, World!"
+        content.body = "Sample notification"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+        let identifier = "MyNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            print("MainViewController> createNotification: Error in notification was \(error)")
+        }
+    }
+    
+    
+    @IBAction func createLocalNotification(_ sender: UIButton) {
+        createNotification()
     }
 }
 
+// MARK: - User notifications host
 
 extension MainViewController: UserNotificationHost {
     var userNotificationsAreEnabled: Bool {
-        return true
+        return areNotificationsEnabled
+    }
+}
+
+extension MainViewController: UserNotificationManagerDelegate {
+    func userNotificationManager(_ userNotificationManager: UserNotificationManager, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("MainViewController> userNotificationManager: \(response.notification.request.content.title)")
+        completionHandler()
     }
 }

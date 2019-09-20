@@ -18,6 +18,7 @@
 		F8265E89233547D90024E389 /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E88233547D90024E389 /* Notifications.framework */; };
 		F8265E8E2335495E0024E389 /* CodiNotificationReceivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */; };
 		F8265E90233549AF0024E389 /* CodiNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E8F233549AF0024E389 /* CodiNotification.swift */; };
+		F8265E93233561510024E389 /* CodiNotificationsResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E92233561510024E389 /* CodiNotificationsResolving.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F8265E88233547D90024E389 /* Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotificationReceivable.swift; sourceTree = "<group>"; };
 		F8265E8F233549AF0024E389 /* CodiNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotification.swift; sourceTree = "<group>"; };
+		F8265E92233561510024E389 /* CodiNotificationsResolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotificationsResolving.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +123,13 @@
 		F8265E01233533990024E389 /* NotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
-				DEA94A1623354CC300E869FD /* NotificationsExample.entitlements */,
-				F8265E8B2335493A0024E389 /* Receivables */,
 				F8265E02233533990024E389 /* AppDelegate.swift */,
-				F8265E8A2335491A0024E389 /* Scenes */,
+				DEA94A1623354CC300E869FD /* NotificationsExample.entitlements */,
 				F8265E06233533990024E389 /* Main.storyboard */,
 				F8265E092335339A0024E389 /* Assets.xcassets */,
 				F8265E0B2335339A0024E389 /* LaunchScreen.storyboard */,
+				F8265E91233561410024E389 /* CodiNotifications */,
+				F8265E8A2335491A0024E389 /* Scenes */,
 				F8265E0E2335339A0024E389 /* Info.plist */,
 			);
 			path = NotificationsExample;
@@ -163,17 +165,18 @@
 			isa = PBXGroup;
 			children = (
 				F8265E04233533990024E389 /* MainViewController.swift */,
-				F8265E8F233549AF0024E389 /* CodiNotification.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		F8265E8B2335493A0024E389 /* Receivables */ = {
+		F8265E91233561410024E389 /* CodiNotifications */ = {
 			isa = PBXGroup;
 			children = (
 				F8265E8D2335495E0024E389 /* CodiNotificationReceivable.swift */,
+				F8265E92233561510024E389 /* CodiNotificationsResolving.swift */,
+				F8265E8F233549AF0024E389 /* CodiNotification.swift */,
 			);
-			path = Receivables;
+			path = CodiNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8265E93233561510024E389 /* CodiNotificationsResolving.swift in Sources */,
 				F8265E05233533990024E389 /* MainViewController.swift in Sources */,
 				F8265E03233533990024E389 /* AppDelegate.swift in Sources */,
 				F8265E8E2335495E0024E389 /* CodiNotificationReceivable.swift in Sources */,

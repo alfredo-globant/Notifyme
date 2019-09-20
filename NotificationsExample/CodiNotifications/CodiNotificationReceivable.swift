@@ -11,7 +11,6 @@ import Notifications
 import UserNotifications
 
 class CodiNotificationReceivable: NotificationReceivable {
-    var identifier: String = ""
     var isAssociated: Bool?
     var apnsTokenData: Data?
     
@@ -36,4 +35,3 @@ class CodiNotificationReceivable: NotificationReceivable {
         
     }
 }
-
