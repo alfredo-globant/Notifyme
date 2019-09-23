@@ -26,25 +26,62 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5u-eX-Ini">
-                                <rect key="frame" x="97" y="387" width="220" height="50"/>
+                                <rect key="frame" x="97" y="350" width="220" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="E50-tK-yIQ"/>
                                     <constraint firstAttribute="width" constant="220" id="ibQ-ay-to0"/>
                                 </constraints>
+                                <state key="normal" title="Configure firebase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="configureFirebase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeX-UR-cqj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKr-rh-gpc">
+                                <rect key="frame" x="97" y="433" width="220" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="RcN-7N-hTL"/>
+                                    <constraint firstAttribute="height" constant="50" id="mHR-wu-0eJ"/>
+                                </constraints>
                                 <state key="normal" title="Configure firebase with options">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="configureWithOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qL-cu-8L2"/>
+                                    <action selector="configureWithOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKB-yc-o8Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHx-zc-Epg">
+                                <rect key="frame" x="97" y="514" width="220" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="SwD-dg-yH8"/>
+                                    <constraint firstAttribute="height" constant="50" id="iLM-0w-qnx"/>
+                                </constraints>
+                                <state key="normal" title="Get Token">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="configureWithOptions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsn-Pc-Vnf"/>
+                                    <action selector="getToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaR-YZ-U75"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YsY-HP-z9A" secondAttribute="bottom" constant="20" id="2Sr-ot-6ni"/>
+                            <constraint firstItem="oHx-zc-Epg" firstAttribute="top" secondItem="qKr-rh-gpc" secondAttribute="bottom" constant="31" id="3yR-1I-U6T"/>
                             <constraint firstItem="Q5u-eX-Ini" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CET-Eb-pK4"/>
-                            <constraint firstItem="Q5u-eX-Ini" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-41" id="rDo-P5-Mmn"/>
+                            <constraint firstItem="qKr-rh-gpc" firstAttribute="height" secondItem="Q5u-eX-Ini" secondAttribute="height" id="Hmq-2U-yXv"/>
+                            <constraint firstItem="qKr-rh-gpc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KHf-8F-ig7"/>
+                            <constraint firstItem="qKr-rh-gpc" firstAttribute="top" secondItem="Q5u-eX-Ini" secondAttribute="bottom" constant="33" id="Oug-nh-JuQ"/>
+                            <constraint firstItem="qKr-rh-gpc" firstAttribute="width" secondItem="Q5u-eX-Ini" secondAttribute="width" id="aow-a7-BSK"/>
+                            <constraint firstItem="oHx-zc-Epg" firstAttribute="width" secondItem="qKr-rh-gpc" secondAttribute="width" id="arf-pu-JTP"/>
+                            <constraint firstItem="oHx-zc-Epg" firstAttribute="height" secondItem="qKr-rh-gpc" secondAttribute="height" id="cT0-97-ioJ"/>
+                            <constraint firstItem="oHx-zc-Epg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i8N-pn-HnX"/>
+                            <constraint firstItem="Q5u-eX-Ini" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-78" id="rDo-P5-Mmn"/>
                             <constraint firstItem="YsY-HP-z9A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tXG-6f-EiO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

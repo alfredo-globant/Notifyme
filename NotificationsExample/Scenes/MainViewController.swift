@@ -51,19 +51,30 @@ class MainViewController: UIViewController {
         createNotification()
     }
     
-    
-    @IBAction func configureWithOptions(_ sender: Any) {
-        notificationsManager?.configureFirebase(with: nil, completionHandler: { (configure) in
-            debugPrint(configure)
-            
-            self.notificationsManager?.getFirebaseToken(completion: { (token) in
-                debugPrint(token)
-            })
-            
+    // FirebaseAppDelegateProxyEnabled
+    @IBAction func configureFirebase(_ sender: Any) {
+        notificationsManager?.configureFirebase()
+        notificationsManager?.getFirebaseToken(completion: { (token) in
+            debugPrint("Token: \(token ?? "error getting token")")
         })
-        
-        
-        
+    }
+    
+    @IBAction func configureWithOptions(_ sender: UIButton) {
+
+        let googleID = "352548351493"
+        let iOSID = "5aedc52956b22d68917884"
+        notificationsManager?.configureFirebaseOptions(googleID: googleID, iOSID: iOSID, completionHandler: { result in
+            debugPrint(result)
+        })
+        self.notificationsManager?.getFirebaseToken(completion: { token in
+            debugPrint("Token: \(token ?? "error getting token")")
+        })
+    }
+    
+    @IBAction func getToken(_ sender: UIButton) {
+        notificationsManager?.getFirebaseToken(completion: { token in
+            debugPrint("Token: \(token ?? "error getting token")")
+        })
     }
     
 }

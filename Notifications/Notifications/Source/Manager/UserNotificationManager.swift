@@ -28,7 +28,6 @@ public protocol UserNotificationManagerDelegate: class {
 /// For an instance of `UserNotificationManager` to work properly, it needs to know about all the features in the app that use user notifications.
 /// So, typically an instance of `UserNotificationManager` is create at the core of the application and injected into components that need it.
 public final class UserNotificationManager: UserNotificationManageable {
-
     
     /// User notification authorization status
     ///
@@ -165,31 +164,6 @@ public extension UserNotificationManager {
         receiver.didReceiveNotification(payload, fetchCompletionHandler: completionHandler)
     }
     
-    func configureFirebase(with options: FirebaseOptions?, completionHandler: @escaping (Bool) -> Void) {
-//        FirebaseApp.app()?.delete({ (deleted) in
-//            if deleted {
-//                FirebaseApp.configure()
-//                completionHandler(deleted)
-//            } else {
-//                completionHandler(deleted)
-//            }
-//        })
-        FirebaseApp.configure()
-        completionHandler(true)
-    }
-    
-    public func getFirebaseToken(completion: @escaping (String?) -> Void) {
-        InstanceID.instanceID().instanceID(handler: { (result, error) in
-            if let error = error {
-                debugPrint("ERROR")
-                completion(nil)
-            } else {
-                debugPrint("\(result?.token)")
-                completion(result?.token)
-            }
-        })
-    }
-    
 }
 
 extension UserNotificationManager {
@@ -215,6 +189,54 @@ extension UserNotificationManager {
         delegate.userNotificationManager(self, didReceive: response, withCompletionHandler: completionHandler)
     }
 
+}
+
+//MARK: Firebase configuration
+
+extension UserNotificationManager {
+    // Private console simulation: 1:557180706253:ios:5aedc52956b22d68917884
+    // Banxico console simulation: 1:352548351493:ios:6675d0b78e55fdd239b66c
+
+    public func configureFirebase() {
+        
+        let googleID = "557180706253"
+        let iOSID = "5aedc52956b22d68917884"
+        let googleAppID = String(format: "1:%@:ios:%@", googleID, iOSID)
+        let options = FirebaseOptions(googleAppID: googleAppID, gcmSenderID: googleID)
+        
+        if FirebaseApp.app() != nil {
+            FirebaseApp.app()?.delete({ _ in
+                FirebaseApp.configure(options: options)
+            })
+        } else {
+            FirebaseApp.configure(options: options)
+        }
+    }
+    
+    public func configureFirebaseOptions(googleID: String, iOSID: String, completionHandler: @escaping (Bool) -> Void) {
+        let googleAppID = String(format: "1:%@:ios:%@", googleID, iOSID)
+        let options = FirebaseOptions(googleAppID: googleAppID, gcmSenderID: googleID)
+        if FirebaseApp.app() != nil {
+            FirebaseApp.app()?.delete({ _ in
+                FirebaseApp.configure(options: options)
+                completionHandler(true)
+            })
+        } else {
+            FirebaseApp.configure(options: options)
+            completionHandler(false)
+        }
+    }
+    
+    public func getFirebaseToken(completion: @escaping (String?) -> Void) {
+        InstanceID.instanceID().instanceID(handler: { (result, error) in
+            if let error = error {
+                completion(nil)
+            } else {
+                completion(result?.token)
+            }
+        })
+    }
+    
 }
 
 private class NotificationCenterDelegateContainer: NSObject, UNUserNotificationCenterDelegate {

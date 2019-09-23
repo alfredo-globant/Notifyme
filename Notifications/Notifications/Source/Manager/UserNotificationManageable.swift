@@ -56,8 +56,10 @@ public protocol UserNotificationManageable {
     /// - Throws: Throws if the receiver is already registered
     func registerReceiver(_ receiver: NotificationReceivable) throws
     
-    func configureFirebase(with options: FirebaseOptions?, completionHandler: @escaping (Bool) -> Void)
+    func configureFirebase()
     
     func getFirebaseToken(completion: @escaping(String?) -> Void)
     
+    func configureFirebaseOptions(googleID: String, iOSID: String, completionHandler: @escaping (Bool) -> Void)
+        
 }

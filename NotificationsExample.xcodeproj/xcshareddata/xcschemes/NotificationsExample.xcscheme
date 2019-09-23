@@ -81,12 +81,13 @@
             ReferencedContainer = "container:NotificationsExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-FIRDebugEnabled"
             isEnabled = "YES">
-         </AdditionalOption>
+         </CommandLineArgument>
+      </CommandLineArguments>
+      <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
