@@ -41,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30177AA4234232BE0047C739 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		30177AA5234232BE0047C739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8265E40233547140024E389 /* Notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E43233547140024E389 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		F8265E44233547140024E389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,11 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30177AA3234232BE0047C739 /* AppController */ = {
+			isa = PBXGroup;
+			children = (
+				30177AA4234232BE0047C739 /* AppController.h */,
+				30177AA5234232BE0047C739 /* Info.plist */,
+			);
+			path = AppController;
+			sourceTree = "<group>";
+		};
 		F8265E36233547140024E389 = {
 			isa = PBXGroup;
 			children = (
 				F8265E42233547140024E389 /* Notifications */,
 				F8265E4D233547140024E389 /* NotificationsTests */,
+				30177AA3234232BE0047C739 /* AppController */,
 				F8265E41233547140024E389 /* Products */,
 			);
 			sourceTree = "<group>";
