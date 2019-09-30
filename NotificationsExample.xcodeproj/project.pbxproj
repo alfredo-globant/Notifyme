@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEA94B35234238D500E869FD /* AppController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94B34234238D500E869FD /* AppController.framework */; };
+		DEA94B3723423FC700E869FD /* AppController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEA94B34234238D500E869FD /* AppController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEA94B3823423FC700E869FD /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E88233547D90024E389 /* Notifications.framework */; };
+		DEA94B3923423FC700E869FD /* Notifications.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E88233547D90024E389 /* Notifications.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEA94B3C2342408900E869FD /* WrappingAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA94B3B2342408900E869FD /* WrappingAppController.swift */; };
+		DEA94B3F23424CFC00E869FD /* CodiNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA94B3E23424CFC00E869FD /* CodiNotification.swift */; };
+		DEA94B4123424F4100E869FD /* CodiNotificationReceivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA94B4023424F4100E869FD /* CodiNotificationReceivable.swift */; };
+		DEA94B4323424FC900E869FD /* CodiNotificationResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA94B4223424FC900E869FD /* CodiNotificationResolver.swift */; };
 		F8265E03233533990024E389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E02233533990024E389 /* AppDelegate.swift */; };
 		F8265E05233533990024E389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E04233533990024E389 /* ViewController.swift */; };
 		F8265E08233533990024E389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8265E06233533990024E389 /* Main.storyboard */; };
@@ -14,7 +22,6 @@
 		F8265E0D2335339A0024E389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8265E0B2335339A0024E389 /* LaunchScreen.storyboard */; };
 		F8265E182335339A0024E389 /* NotificationsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E172335339A0024E389 /* NotificationsExampleTests.swift */; };
 		F8265E232335339A0024E389 /* NotificationsExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265E222335339A0024E389 /* NotificationsExampleUITests.swift */; };
-		F8265E89233547D90024E389 /* Notifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8265E88233547D90024E389 /* Notifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +41,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DEA94B3A23423FC800E869FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DEA94B3723423FC700E869FD /* AppController.framework in Embed Frameworks */,
+				DEA94B3923423FC700E869FD /* Notifications.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DEA94B34234238D500E869FD /* AppController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppController.framework; path = "../../../Library/Developer/Xcode/DerivedData/Notifyme-chhielsuxpqdoredambifbqpiikf/Build/Products/Debug-iphoneos/AppController.framework"; sourceTree = "<group>"; };
+		DEA94B3B2342408900E869FD /* WrappingAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingAppController.swift; sourceTree = "<group>"; };
+		DEA94B3D2342419500E869FD /* NotificationsExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationsExample.entitlements; sourceTree = "<group>"; };
+		DEA94B3E23424CFC00E869FD /* CodiNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotification.swift; sourceTree = "<group>"; };
+		DEA94B4023424F4100E869FD /* CodiNotificationReceivable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotificationReceivable.swift; sourceTree = "<group>"; };
+		DEA94B4223424FC900E869FD /* CodiNotificationResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodiNotificationResolver.swift; sourceTree = "<group>"; };
 		F8265DFF233533990024E389 /* NotificationsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8265E02233533990024E389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8265E04233533990024E389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8265E89233547D90024E389 /* Notifications.framework in Frameworks */,
+				DEA94B3823423FC700E869FD /* Notifications.framework in Frameworks */,
+				DEA94B35234238D500E869FD /* AppController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +130,17 @@
 		F8265E01233533990024E389 /* NotificationsExample */ = {
 			isa = PBXGroup;
 			children = (
+				DEA94B3D2342419500E869FD /* NotificationsExample.entitlements */,
 				F8265E02233533990024E389 /* AppDelegate.swift */,
 				F8265E04233533990024E389 /* ViewController.swift */,
 				F8265E06233533990024E389 /* Main.storyboard */,
 				F8265E092335339A0024E389 /* Assets.xcassets */,
 				F8265E0B2335339A0024E389 /* LaunchScreen.storyboard */,
 				F8265E0E2335339A0024E389 /* Info.plist */,
+				DEA94B3B2342408900E869FD /* WrappingAppController.swift */,
+				DEA94B3E23424CFC00E869FD /* CodiNotification.swift */,
+				DEA94B4023424F4100E869FD /* CodiNotificationReceivable.swift */,
+				DEA94B4223424FC900E869FD /* CodiNotificationResolver.swift */,
 			);
 			path = NotificationsExample;
 			sourceTree = "<group>";
@@ -132,6 +166,7 @@
 		F8265E87233547D90024E389 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEA94B34234238D500E869FD /* AppController.framework */,
 				F8265E88233547D90024E389 /* Notifications.framework */,
 			);
 			name = Frameworks;
@@ -147,6 +182,7 @@
 				F8265DFB233533990024E389 /* Sources */,
 				F8265DFC233533990024E389 /* Frameworks */,
 				F8265DFD233533990024E389 /* Resources */,
+				DEA94B3A23423FC800E869FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +241,14 @@
 				TargetAttributes = {
 					F8265DFE233533990024E389 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F8265E122335339A0024E389 = {
 						CreatedOnToolsVersion = 10.1;
@@ -269,7 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8265E05233533990024E389 /* ViewController.swift in Sources */,
+				DEA94B4323424FC900E869FD /* CodiNotificationResolver.swift in Sources */,
+				DEA94B3C2342408900E869FD /* WrappingAppController.swift in Sources */,
 				F8265E03233533990024E389 /* AppDelegate.swift in Sources */,
+				DEA94B4123424F4100E869FD /* CodiNotificationReceivable.swift in Sources */,
+				DEA94B3F23424CFC00E869FD /* CodiNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +492,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotificationsExample/NotificationsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQUE8QE5D8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -454,7 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.NotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.notifyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,7 +515,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NotificationsExample/NotificationsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQUE8QE5D8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -475,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.test.NotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.notifyme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,14 +9,39 @@
 import UIKit
 import Notifications
 import UserNotifications
+import AppController
 
 class ViewController: UIViewController {
     
-    var notificationsManager: UserNotificationManager?
-
+    var notificationManager: UserNotificationManager?
+    var notificationsResolver: NotificationResolving = CodiNotificationResolver()
+    var areNotificationsEnabled = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        notificationManager = UserNotificationManager(requesting: [.alert, .badge, .sound],
+                                                      host: self,
+                                                      notificationResolver: notificationsResolver)
+        notificationManager?.delegate = self
+        notificationManager?.requestAuthorization(completionHandler: { authResponse in
+            self.areNotificationsEnabled = authResponse.isAuthorised
+        })
     }
+}
+
+extension ViewController: UserNotificationHost {
+    var userNotificationsAreEnabled: Bool {
+        return areNotificationsEnabled
+    }
+}
+
+extension ViewController: UserNotificationManagerDelegate {
+    func userNotificationManager(_ userNotificationManager: UserNotificationManager, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        debugPrint(response.notification.request.content)
+        completionHandler()
+    }
+    
+    
 }
 
 struct CodiNotification: Codable {
